@@ -1,9 +1,20 @@
+/**
+ * MontyHall Class
+ * The basic Monty hall simulation including all possible outcomes for selection
+ * @author Nic Manoogian
+ */
 public class MontyHall
 {
+    /**
+     * Simulates one selection
+     * The door with the car and user selection is chosen at random
+     * Monty will show the door that is not the user selection or the door with the car
+     * @return 1 if the user chose the car, 0 if the user should have switched
+     */
     public static int draw()
     {
-        int userSelection = ((int)(Math.random()*3)) + 1; //1
-        int doorWithCar = ((int)(Math.random()*3)) + 1; //1
+        int userSelection = ((int)(Math.random()*3)) + 1;
+        int doorWithCar = ((int)(Math.random()*3)) + 1;
         int montyShows = 0;
         if (doorWithCar == 1)
         {
@@ -61,6 +72,11 @@ public class MontyHall
         }
     }
 
+    /**
+     * Main Method
+     * Draws a number of times and keeps track of the number of successes
+     * @param args first argument is the number of iterations
+     */
     public static void main(String[] args)
     {
         int sum = 0;
